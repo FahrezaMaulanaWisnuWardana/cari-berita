@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cari Berita — Pencari Link Berita</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- ===== Sidebar: riwayat pencarian ===== -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-icon">📰</span>
+        <div>
+          <h1>Cari Berita</h1>
+          <p>Google News · pencarian lokal</p>
+        </div>
+      </div>
+
+      <div class="history-head">
+        <h2>Riwayat</h2>
+        <button id="clear-history" class="ghost-btn" title="Hapus semua riwayat">Bersihkan</button>
+      </div>
+      <ul id="history-list" class="history-list">
+        <li class="history-empty">Belum ada pencarian.</li>
+      </ul>
+    </aside>
+
+    <!-- ===== Panel utama ===== -->
+    <main class="main">
+      <form id="search-form" class="search-bar" autocomplete="off">
+        <div class="search-row">
+          <input
+            id="q"
+            type="text"
+            placeholder="Ketik kata kunci… pisahkan dengan koma untuk banyak kata kunci"
+            required
+          />
+          <button type="submit" id="search-btn">🔍 Cari</button>
+        </div>
+        <div class="options-row">
+          <label class="opt">
+            <span>Bahasa</span>
+            <select id="lang"></select>
+          </label>
+          <label class="opt">
+            <span>Periode</span>
+            <select id="range">
+              <option value="">Semua waktu</option>
+              <option value="1d">24 jam terakhir</option>
+              <option value="7d">7 hari terakhir</option>
+              <option value="30d">30 hari terakhir</option>
+              <option value="1y">1 tahun terakhir</option>
+              <option value="custom">Rentang kustom…</option>
+            </select>
+          </label>
+          <span id="custom-range" class="custom-range" hidden>
+            <input type="date" id="after" />
+            <span class="tilde">s.d.</span>
+            <input type="date" id="before" />
+          </span>
+          <label class="opt checkbox">
+            <input type="checkbox" id="exact" checked />
+            <span>Frasa tepat</span>
+          </label>
+          <label class="opt">
+            <span>Urutkan</span>
+            <select id="sort">
+              <option value="relevance">Relevansi</option>
+              <option value="newest">Terbaru</option>
+              <option value="oldest">Terlama</option>
+            </select>
+          </label>
+        </div>
+      </form>
+
+      <!-- Bar filter + aksi -->
+      <section id="filter-bar" class="filter-bar" hidden>
+        <div class="filter-top">
+          <span id="result-count" class="result-count"></span>
+          <div class="export-btns">
+            <button id="export-csv" class="tool-btn">⬇ CSV</button>
+            <button id="export-xlsx" class="tool-btn">⬇ Excel</button>
+          </div>
+        </div>
+        <div class="filter-bottom">
+          <div id="source-chips" class="source-chips"></div>
+          <div class="date-refine">
+            <span class="refine-label">Saring tanggal:</span>
+            <input type="date" id="refine-from" />
+            <input type="date" id="refine-to" />
+            <button id="refine-reset" class="ghost-btn" title="Reset filter tanggal">↺</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="status" class="status" hidden></div>
+      <section id="results" class="results"></section>
+
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon">🔎</div>
+        <h2>Mulai pencarian</h2>
+        <p>Ketik kata kunci lalu tekan <b>Cari</b>. Hasil diambil dari Google News (banyak sumber berita sekaligus).</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

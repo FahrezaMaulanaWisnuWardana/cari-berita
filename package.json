@@ -1,0 +1,18 @@
+{
+  "name": "cari-berita",
+  "version": "1.0.0",
+  "description": "Alat pencari link berita berdasarkan kata kunci — berbasis Google News RSS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "fast-xml-parser": "^4.4.1",
+    "xlsx": "^0.18.5"
+  }
+}

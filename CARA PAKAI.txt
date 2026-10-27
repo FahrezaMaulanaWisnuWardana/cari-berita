@@ -1,0 +1,41 @@
+CARA PAKAI CARI BERITA
+======================
+
+1. Klik dua kali "Cari Berita.bat"
+   - Browser akan terbuka dengan aplikasi pencarian berita.
+
+2. Ketik kata kunci, misalnya: insentif ekonomi
+   - Lalu klik tombol Cari.
+   - Hasil berita akan muncul di bawah, dari banyak sumber berita.
+   - BISA LEBIH DARI SATU KATA KUNCI:
+     pisahkan dengan koma, contoh:
+     stimulus ekonomi, insentif ekonomi, APBN
+     Semua kata kunci dicari sekaligus, hasilnya digabung,
+     dan setiap berita diberi tanda 🔍 kata kunci asalnya.
+
+3. Klik judul berita untuk membuka beritanya di tab baru.
+
+4. Atau klik tombol CSV / Excel untuk menyimpan daftar berita ke komputer.
+
+============================================
+CATATAN PENTING
+============================================
+
+- SAAT PERTAMA KALI
+  Aplikasi menyiapkan diri selama 1-2 menit. Ini hanya terjadi satu kali.
+  Selanjutnya buka lebih cepat.
+
+- JENDELA HITAM KECIL
+  Saat dibuka, akan muncul jendela hitam kecil yang mengecil sendiri.
+  Jendela ini adalah mesin aplikasi - JANGAN ditutup selama aplikasi dipakai.
+  Tidak masalah menjadikan minimized.
+
+- MEMATIKAN APLIKASI
+  Klik dua kali "Matikan Cari Berita.bat"
+
+- SEKALI SAJA: PASANG NODE.JS
+  Jika muncul pesan Node.js belum terpasang:
+  1. Buka https://nodejs.org
+  2. Unduh versi LTS, pasang sampai selesai
+  3. Klik dua kali "Cari Berita.bat" lagi
+  Cukup dilakukan satu kali saja.

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "s1793068573787",
+    "q": "buma, tambang, tabalong",
+    "exact": true,
+    "range": "",
+    "after": "",
+    "before": "",
+    "lang": "id",
+    "count": 301,
+    "ts": 1793068573787
+  },
+  {
+    "id": "s1793068186611",
+    "q": "stimulus ekonomi, minyak goreng",
+    "exact": true,
+    "range": "7d",
+    "after": "",
+    "before": "",
+    "lang": "id",
+    "count": 174,
+    "ts": 1793068186611
+  },
+  {
+    "id": "s1793067960628",
+    "q": "tambang",
+    "exact": true,
+    "range": "",
+    "after": "",
+    "before": "",
+    "lang": "id",
+    "count": 101,
+    "ts": 1793067960628
+  }
+]
