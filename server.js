@@ -186,7 +186,10 @@ app.post('/api/export', (req, res) => {
     return res.status(400).json({ error: 'Tidak ada baris untuk diekspor.' });
   }
 
-  const header = ['No', 'Judul', 'Sumber', 'Tanggal', 'Waktu (UTC)', 'Link', 'Snippet'];
+  const header = [
+    'No', 'Judul', 'Sumber', 'Tanggal', 'Waktu (UTC)',
+    'Link Berita', 'Link Google News', 'Snippet',
+  ];
   const data = rows.map((r, i) => [
     i + 1,
     r.title || '',
@@ -194,11 +197,12 @@ app.post('/api/export', (req, res) => {
     r.publishedAt ? r.publishedAt.slice(0, 10) : '',
     r.publishedAt ? r.publishedAt.slice(11, 19) : '',
     r.url || '',
+    r.googleUrl || r.url || '',
     r.snippet || '',
   ]);
 
   const ws = XLSX.utils.aoa_to_sheet([header, ...data]);
-  ws['!cols'] = [4, 60, 18, 12, 11, 70, 50].map((wch) => ({ wch }));
+  ws['!cols'] = [4, 60, 18, 12, 11, 70, 70, 50].map((wch) => ({ wch }));
 
   const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
   const kwPart = (search.q || 'berita').replace(/[^\w\u00C0-\u024F-]+/g, '_').slice(0, 24);
